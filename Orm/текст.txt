@@ -1,0 +1,16 @@
+Object-Relational Mapping (ORM) in C# is a technique that converts data between C# objects and relational databases, enabling developers to interact with databases using object-oriented programming rather than writing raw SQL queries.
+ This approach maps C# classes to database tables and instances of those classes to rows in the tables, simplifying data persistence and management.
+
+The most widely used ORM for C# and ASP.NET Core is Entity Framework Core (EF Core), which provides a data layer through classes that extend DbContext.
+ EF Core is recommended for general use due to its strong support, integration with ASP.NET Core, and ability to handle common CRUD operations efficiently.
+ It supports multiple databases and helps prevent SQL injection by using parameterized queries.
+
+Another popular option is Dapper, a lightweight and high-performance library for data access and ORM that supports .NET Core and C#.
+ Dapper is known for its speed and simplicity, making it ideal for scenarios where performance is critical or when developers prefer more direct control over SQL queries.
+ It is often used alongside EF Core in a CQRS (Command Query Responsibility Segregation) architecture, where Dapper handles read operations and EF Core manages writes.
+
+Other ORMs include LINQ to SQL, which is free but less commonly used today
+ , and alternatives like Linq2Db, NPoco, and LLBLGen Pro, which offer varying levels of performance, flexibility, and advanced features such as support for CTEs and window functions.
+ Some developers choose to avoid full ORMs altogether, opting for lightweight solutions like Dapper or even custom data access layers to maintain fine-grained control over database interactions.
+
+In summary, Entity Framework Core is the default choice for most C# projects due to its comprehensive feature set and ecosystem support, while Dapper is favored for performance-critical applications or when developers prefer minimal abstraction over SQL.
